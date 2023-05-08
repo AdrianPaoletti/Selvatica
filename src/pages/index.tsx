@@ -1,8 +1,8 @@
-import Head from 'next/head'
-import Image from 'next/image'
+import Head from "next/head";
 
+import Navbar from "selvatica/components/Navbar/Navbar";
 
-export default function Home() {
+export default function Landing() {
   return (
     <>
       <Head>
@@ -12,8 +12,54 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-
+        <Navbar />
+        <div
+          id="carouselExampleControls"
+          className="carousel slide"
+          data-bs-touch="false"
+        >
+          <div className="carousel-inner">
+            <div className="carousel-item">
+              <img
+                src="/images/1-medium.jpg"
+                className="d-block w-100 h-100"
+                alt="prueba"
+              />
+            </div>
+            <div className="carousel-item">
+              <img
+                src="/images/2-medium.jpg"
+                className="d-block w-100 h-100"
+                alt="prueba"
+              />
+            </div>
+          </div>
+          <button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev"
+          >
+            <span
+              className="carousel-control-prev-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button
+            className="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="next"
+          >
+            <span
+              className="carousel-control-next-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Next</span>
+          </button>
+        </div>
       </main>
     </>
-  )
+  );
 }
