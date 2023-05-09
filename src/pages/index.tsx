@@ -1,5 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
+import { Carousel } from "react-bootstrap";
 import Head from "next/head";
 
+import EastIcon from "@mui/icons-material/East";
+import WestIcon from "@mui/icons-material/West";
 import Navbar from "selvatica/components/Navbar/Navbar";
 
 export default function Landing() {
@@ -11,54 +15,38 @@ export default function Landing() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main className="landing">
         <Navbar />
-        <div
-          id="carouselExampleControls"
-          className="carousel slide"
-          data-bs-touch="false"
+        <Carousel
+          fade
+          interval={null}
+          indicators={false}
+          prevIcon={
+            <span className="carousel__button">
+              <WestIcon fontSize="inherit" color="inherit" />
+            </span>
+          }
+          nextIcon={
+            <span className="carousel__button">
+              <EastIcon fontSize="inherit" color="inherit" />
+            </span>
+          }
         >
-          <div className="carousel-inner">
-            <div className="carousel-item">
-              <img
-                src="/images/1-medium.jpg"
-                className="d-block w-100 h-100"
-                alt="prueba"
-              />
-            </div>
-            <div className="carousel-item">
-              <img
-                src="/images/2-medium.jpg"
-                className="d-block w-100 h-100"
-                alt="prueba"
-              />
-            </div>
-          </div>
-          <button
-            className="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleControls"
-            data-bs-slide="prev"
-          >
-            <span
-              className="carousel-control-prev-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button
-            className="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleControls"
-            data-bs-slide="next"
-          >
-            <span
-              className="carousel-control-next-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Next</span>
-          </button>
-        </div>
+          <Carousel.Item>
+            <img
+              className="d-block"
+              src="/images/1-medium.jpg"
+              alt="arbicultura image"
+            />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block"
+              src="/images/2-medium.jpg"
+              alt="arbicultura image"
+            />
+          </Carousel.Item>
+        </Carousel>
       </main>
     </>
   );

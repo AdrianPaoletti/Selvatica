@@ -1,9 +1,69 @@
 .landing {
-  font-size: $font-size-normal;
-  &__page {
-    > p {
-      font-size: $font-size-normal;
-      padding: 1rem;
+  position: relative;
+}
+
+.carousel {
+  &__button {
+    font-size: 10rem;
+    color: $color-white;
+    opacity: 1;
+  }
+}
+
+//CAROUSEL BOOTSTRAP STYLES
+div.carousel {
+  position: absolute;
+  top: 0;
+
+  a {
+    opacity: 0;
+    padding: 0 2.5rem;
+  }
+
+  &:hover {
+    & .carousel-control-prev {
+      animation: fadeArrowLeft 0.3s ease-in;
+      opacity: 1;
     }
+
+    & .carousel-control-next {
+      animation: fadeArrowRight 0.3s ease-in;
+      opacity: 1;
+    }
+  }
+}
+
+a.carousel-control-next {
+  justify-content: flex-end;
+  &:hover {
+    animation: fadeArrowRight 0.3s ease-in;
+    opacity: 1;
+    & ~ .carousel-control-prev {
+      animation: fadeArrowLeft 0.3s ease-in;
+      opacity: 1;
+    }
+  }
+}
+
+a.carousel-control-prev {
+  justify-content: flex-start;
+  &:hover {
+    animation: fadeArrowLeft 0.3s ease-in;
+    opacity: 1;
+    & ~ .carousel-control-next {
+      animation: fadeArrowRight 0.3s ease-in;
+      opacity: 1;
+    }
+  }
+}
+
+.carousel-item {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(red, rgba(0, 0, 0, 0.7));
+  img {
+    object-fit: cover;
+    height: 100vh;
+    width: 100vw;
   }
 }

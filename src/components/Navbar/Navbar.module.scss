@@ -2,11 +2,12 @@
 @import "src/styles/abstracts/variables";
 
 .navbar {
-  @include display-flex(space-between, inline);
-  margin: 2.5rem;
+  @include display-flex(space-between, flex-start);
+  background-color: transparent;
+  position: inherit;
+  z-index: 2;
 
   &__menu {
-    z-index: 2;
     margin-top: 1rem;
     cursor: pointer;
 
@@ -30,6 +31,6 @@
     -webkit-transition: 1s cubic-bezier(0.07, 0.95, 0, 1);
     transition: 1s cubic-bezier(0.07, 0.95, 0, 1);
     margin-bottom: 0.8rem;
-    background: black; //$color-white;
+    background: $color-white;
   }
 }

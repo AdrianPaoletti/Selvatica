@@ -6,14 +6,15 @@ import styles from "./Navbar.module.scss";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  2.78700745474;
+  const LOGO_WIDTH = 325;
+  const LOGO_HEIGHT = LOGO_WIDTH / 2.787;
 
   return (
-    <section className={styles.navbar}>
+    <section className={`${styles.navbar} u-padding-medium`}>
       <img
-        src="/images/logo-black.png"
-        width={325}
-        height={116.6}
+        src="/images/logo-white.png"
+        width={LOGO_WIDTH}
+        height={LOGO_HEIGHT}
         alt="logo selvatica arbicoltura"
       />
       <div
