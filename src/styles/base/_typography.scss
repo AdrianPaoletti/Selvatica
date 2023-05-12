@@ -2,3 +2,14 @@ body {
   font-family: "Work Sans", sans-serif;
   font-size: $font-size-normal;
 }
+
+.heading-secundary {
+  font-size: $font-size-large;
+  font-family: "Work Sans";
+}
+
+.text-main {
+  font-size: $font-size-normal;
+  font-family: "Work Sans";
+  line-height: 3.5rem;
+}

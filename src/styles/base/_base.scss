@@ -6,6 +6,20 @@
   box-sizing: inherit;
 }
 
+*::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: transparent;
+  position: absolute;
+}
+*::-webkit-scrollbar-thumb {
+  border-radius: 2rem;
+  border: 0.3rem solid white;
+}
+
 html {
   font-size: 62.5%; /* 10px = 10 * 0.625 || 10 / 16 */
+}
+
+body {
+  overflow: overlay;
 }

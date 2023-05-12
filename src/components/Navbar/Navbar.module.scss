@@ -4,14 +4,19 @@
 .navbar {
   @include display-flex(space-between, flex-start);
   background-color: transparent;
-  position: inherit;
-  z-index: 2;
+  width: 100%;
+  position: absolute;
+  z-index: 3;
 
-  &__menu {
+  &__burger-menu {
     margin-top: 1rem;
     cursor: pointer;
 
     &--active {
+      span {
+        background: $color-black;
+      }
+
       span:nth-child(1) {
         transform: translateY(12px) rotate(45deg);
       }
@@ -24,7 +29,7 @@
     }
   }
 
-  &__menu-line {
+  &__burger-menu-line {
     display: flex;
     width: 6rem;
     height: 0.4rem;
@@ -32,5 +37,69 @@
     transition: 1s cubic-bezier(0.07, 0.95, 0, 1);
     margin-bottom: 0.8rem;
     background: $color-white;
+  }
+}
+
+.slide {
+  &__menu {
+    top: 0;
+    height: 100vh;
+    z-index: 2;
+    position: fixed;
+    background-color: $color-white;
+    width: 38vw;
+    max-width: 650px;
+    margin-left: auto;
+    right: -40vw;
+    transition: all 0.5s ease-in-out;
+    @include display-flex(space-between, flex-end, column);
+    &--active {
+      right: 0;
+    }
+  }
+  &__list {
+    @include display-flex(center, flex-end, column);
+    margin-bottom: 0;
+    height: 100%;
+  }
+  &__list-item {
+    font-size: 6.5rem;
+    list-style: none;
+    font-weight: 400;
+    cursor: pointer;
+    border: 3px solid transparent;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 4px;
+      bottom: 0.6rem;
+      left: 0;
+      background-color: $color-black;
+      transform-origin: bottom left;
+      transition: transform 0.25s ease-out;
+    }
+
+    &:hover {
+      // border-bottom: 3px solid black;
+
+      &::after {
+        transform: scaleX(1);
+        transform-origin: bottom lef;
+      }
+    }
+  }
+
+  &__languages {
+    // @include display-flex(flex-end);
+    font-size: 3.5rem;
+    span {
+      &:last-child {
+        color: $color-disabled;
+      }
+    }
   }
 }

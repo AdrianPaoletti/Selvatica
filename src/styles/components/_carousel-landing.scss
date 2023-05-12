@@ -1,0 +1,56 @@
+//CAROUSEL BOOTSTRAP STYLES
+div.carousel {
+  a {
+    opacity: 0;
+    padding: 0 2.5rem;
+
+    &:hover {
+      opacity: 0;
+    }
+
+    &:focus {
+      opacity: 0;
+    }
+  }
+
+  a.carousel-control-next {
+    justify-content: flex-end;
+    animation: fadeOutArrowRight 0.3s ease-in;
+    transition: none;
+  }
+
+  a.carousel-control-prev {
+    justify-content: flex-start;
+    animation: fadeOutArrowLeft 0.3s ease-in;
+    transition: none;
+  }
+
+  &:hover {
+    & .carousel-control-prev {
+      animation: fadeInArrowLeft 0.3s ease-in;
+      opacity: 1;
+    }
+
+    & .carousel-control-next {
+      animation: fadeInArrowRight 0.3s ease-in;
+      opacity: 1;
+    }
+  }
+
+  .carousel-item {
+    height: 100vh;
+    width: 100vw;
+
+    img.carousel__image {
+      object-fit: cover;
+      height: 100vh;
+      width: 100vw;
+      filter: brightness(80%);
+      animation: fadeOutBrightness 0.5s ease-in-out;
+      &--active {
+        filter: brightness(60%);
+        animation: fadeInBrightness 0.5s ease-in-out;
+      }
+    }
+  }
+}
