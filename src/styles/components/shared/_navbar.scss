@@ -7,12 +7,10 @@
   transition: all 0.3s;
 
   &--sticky {
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.85);
   }
 
   &__logo {
-    // width: 3.25rem;
-    // height: calc(3.25rem / 2.787);
     transition: all 0.5s;
     &--sticky {
       width: 150px;

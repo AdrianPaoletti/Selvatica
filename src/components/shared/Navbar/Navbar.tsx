@@ -5,7 +5,7 @@ import { useState } from "react";
 const Navbar = ({ isMenuOpen, setIsMenuOpen }: any) => {
   const [scrollFlag, setScrollFlag] = useState<boolean>(false);
 
-  if (typeof window !== "undefined")
+  if (typeof window !== "undefined") {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 10) {
         setScrollFlag(true);
@@ -13,6 +13,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }: any) => {
         setScrollFlag(false);
       }
     });
+  }
 
   const LOGO_WIDTH = 325;
   const LOGO_HEIGHT = LOGO_WIDTH / 2.787;
