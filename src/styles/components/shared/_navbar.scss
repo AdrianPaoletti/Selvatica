@@ -2,8 +2,23 @@
   @include display-flex(space-between, flex-start);
   background-color: transparent;
   width: 100%;
-  position: absolute;
+  position: fixed;
   z-index: 3;
+  transition: all 0.3s;
+
+  &--sticky {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+
+  &__logo {
+    // width: 3.25rem;
+    // height: calc(3.25rem / 2.787);
+    transition: all 0.5s;
+    &--sticky {
+      width: 150px;
+      height: calc(150px / 2.787);
+    }
+  }
 
   &__burger-menu {
     margin-top: 1rem;
@@ -64,34 +79,12 @@
     list-style: none;
     font-weight: 400;
     cursor: pointer;
-    border: 3px solid transparent;
     position: relative;
 
-    &::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      transform: scaleX(0);
-      height: 4px;
-      bottom: 0.6rem;
-      left: 0;
-      background-color: $color-black;
-      transform-origin: bottom left;
-      transition: transform 0.25s ease-out;
-    }
-
-    &:hover {
-      // border-bottom: 3px solid black;
-
-      &::after {
-        transform: scaleX(1);
-        transform-origin: bottom lef;
-      }
-    }
+    @include underline-effect();
   }
 
   &__languages {
-    // @include display-flex(flex-end);
     font-size: 3.5rem;
     span {
       &:last-child {

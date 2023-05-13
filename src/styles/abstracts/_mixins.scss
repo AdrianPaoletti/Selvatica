@@ -8,3 +8,25 @@
   justify-content: $justify-content;
   align-items: $align-items;
 }
+
+@mixin underline-effect($height: 0.4rem, $bottom: 0.6rem) {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: $height;
+    bottom: $bottom;
+    left: 0;
+    background-color: $color-black;
+    transform-origin: bottom left;
+    transition: transform 0.25s ease-out;
+  }
+
+  &:hover {
+    &::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
+}

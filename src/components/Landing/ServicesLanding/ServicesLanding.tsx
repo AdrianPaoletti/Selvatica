@@ -3,7 +3,7 @@
 const ServicesLanding = () => {
   return (
     <section className="services">
-      <article className="u-padding-medium">
+      <article className="services__text u-padding-medium">
         <h2 className="heading-secundary u-padding-top-bottom-medium">
           En Selvatica ...
         </h2>
@@ -14,7 +14,7 @@ const ServicesLanding = () => {
           la biodiversitat passa a ser un factor essencial. A Simbiosi tenim una
           llarga trajectòria en el camp de la revegetació urbana.
         </p>
-        <p className="text-main u-padding-top-bottom-medium u-margin-left-right-medium services__link">
+        <p className="text-main u-margin-left-auto u-padding-top-bottom-medium u-margin-left-right-medium services__link">
           Serveis
         </p>
       </article>

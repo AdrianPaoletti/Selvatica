@@ -1,8 +1,19 @@
 .services {
   background-color: $color-gray-background;
 
+  &__text {
+    @include display-flex(initial, initial, column);
+  }
+
   &__link {
-    text-align: right;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    @include underline-effect(0.3rem, 1.6rem);
+
+    &:hover {
+      font-weight: 500;
+    }
   }
 
   &__photos {

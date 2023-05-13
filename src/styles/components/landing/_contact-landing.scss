@@ -1,9 +1,23 @@
 .contact {
-  min-height: 47.5rem;
+  // min-height: 47.5rem;
   &-content {
     @include display-flex(initial);
   }
   &-block {
     width: 50vw;
+  }
+  &__social-media {
+    @include display-flex(flex-end);
+    gap: 1rem;
+    font-size: 4rem;
+
+    a {
+      color: rgba(0, 0, 0, 0.54);
+      transition: color 0.25s ease-in-out;
+
+      &:hover {
+        color: $color-black;
+      }
+    }
   }
 }

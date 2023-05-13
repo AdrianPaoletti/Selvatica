@@ -1,17 +1,37 @@
 /* eslint-disable @next/next/no-img-element */
 
+import { useState } from "react";
+
 const Navbar = ({ isMenuOpen, setIsMenuOpen }: any) => {
+  const [scrollFlag, setScrollFlag] = useState<boolean>(false);
+
+  if (typeof window !== "undefined")
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 10) {
+        setScrollFlag(true);
+      } else {
+        setScrollFlag(false);
+      }
+    });
+
   const LOGO_WIDTH = 325;
   const LOGO_HEIGHT = LOGO_WIDTH / 2.787;
 
   return (
     <>
-      <header className="navbar-component u-padding-medium">
+      <header
+        className={`navbar-component u-padding-medium ${
+          scrollFlag ? "navbar-component--sticky" : ""
+        }`}
+      >
         <img
           src="/images/logo-white.png"
           width={LOGO_WIDTH}
           height={LOGO_HEIGHT}
           alt="logo selvatica arbicoltura"
+          className={`navbar-component__logo ${
+            scrollFlag ? "navbar-component__logo--sticky" : ""
+          }`}
         />
         <div
           className={`navbar-component__burger-menu ${

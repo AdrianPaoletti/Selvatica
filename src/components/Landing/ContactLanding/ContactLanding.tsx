@@ -1,3 +1,6 @@
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+
 const ContactLanding = () => {
   return (
     <section className="contact u-padding-medium">
@@ -21,6 +24,14 @@ const ContactLanding = () => {
             +34 677 838 775
           </p>
         </div>
+      </div>
+      <div className="contact__social-media u-margin-left-right-medium">
+        <a href="https://instagram.com/selvatica.arboricultura?igshid=MzRlODBiNWFlZA==">
+          <InstagramIcon fontSize="inherit" color="inherit" />
+        </a>
+        <a href="https://instagram.com/selvatica.arboricultura?igshid=MzRlODBiNWFlZA==">
+          <FacebookIcon fontSize="inherit" color="inherit" />
+        </a>
       </div>
     </section>
   );
