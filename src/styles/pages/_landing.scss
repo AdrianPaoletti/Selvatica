@@ -4,21 +4,4 @@
   &__biodiversity {
     background-color: #eeeeee;
   }
-
-  &__contact {
-    min-height: 47.5rem;
-    &-content {
-      @include display-flex(initial);
-    }
-    &-block {
-      width: 50vw;
-    }
-  }
-}
-
-.carousel {
-  &__button {
-    font-size: 9rem;
-    color: $color-white;
-  }
 }

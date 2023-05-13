@@ -1,11 +1,15 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Head from "next/head";
 
-import CarouselLanding from "selvatica/components/CarouselLanding/CarouselLanding";
-import Navbar from "selvatica/components/Navbar/Navbar";
+import BiodiversityLanding from "selvatica/components/Landing/BiodiversityLanding/BiodiversityLanding";
+import CarouselLanding from "selvatica/components/Landing/CarouselLanding/CarouselLanding";
+import ContactLanding from "selvatica/components/Landing/ContactLanding/ContactLanding";
+import ServicesLanding from "selvatica/components/Landing/ServicesLanding/ServicesLanding";
+import Navbar from "selvatica/components/shared/Navbar/Navbar";
 
 export default function Landing() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+
   return (
     <>
       <Head>
@@ -14,45 +18,12 @@ export default function Landing() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="landing">
+      <main className={`landing`}>
         <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
         <CarouselLanding isMenuOpen={isMenuOpen} />
-        <section className="landing__biodiversity u-padding-medium">
-          <h2 className="heading-secundary u-padding-top-bottom-medium">
-            Biodiversitat
-          </h2>
-          <div className="landing__biodiversity-text u-padding-top-bottom-medium">
-            <p className="text-main u-margin-left-right-medium">
-              {`Conscients del valor de preservar i expandir la diversitat biològica, cada cop més, veiem com tant en el sector públic com privat, incorporen projectes que fomenten el desenvolupament de nous espais on la biodiversitat passa a ser un factor essencial. A Simbiosi tenim una llarga trajectòria en el camp de la revegetació urbana`}
-            </p>
-            <p className="text-main u-padding-top-bottom-medium u-margin-left-right-medium">
-              {`Construïm cobertes verdes, jardins verticals, reserves de papallones, caixes niu i hotels d’insectes per naturalitzar zones antropitzades, creant nous entorns que promouen la biodiversitat. Aquestes mesures afavoreixen l’obtenció d’homologacions internacionals que avaluen el grau de sostenibilitat ambiental en les ediﬁcacions. La certiﬁcació més signiﬁcativa a nivell europeu és l’obtinguda a través del mètode BREEAM®, del qual som professionals associats.`}
-            </p>
-          </div>
-        </section>
-        <section className="landing__contact u-padding-medium">
-          <h2 className="heading-secundary u-padding-top-bottom-medium">
-            Contacte
-          </h2>
-          <div className="landing__contact-content">
-            <div className="landing__contact-block u-padding-top-bottom-medium">
-              <p className="landing__contact-text text-main u-margin-left-right-medium">
-                Admninistracio
-              </p>
-              <p className="landing__contact-text text-main u-margin-left-right-medium">
-                C. Nord 21, 08921 – Santa Coloma de Gramenet (Barcelona)
-              </p>
-            </div>
-            <div className="landing__contact-block u-padding-top-bottom-medium">
-              <p className="landing__contact-text text-main u-margin-left-right-medium">
-                Contacte
-              </p>
-              <p className="landing__contact-text text-main u-margin-left-right-medium">
-                +34 677 838 775
-              </p>
-            </div>
-          </div>
-        </section>
+        <ServicesLanding />
+        <BiodiversityLanding />
+        <ContactLanding />
       </main>
     </>
   );

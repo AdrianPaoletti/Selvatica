@@ -1,0 +1,9 @@
+.contact {
+  min-height: 47.5rem;
+  &-content {
+    @include display-flex(initial);
+  }
+  &-block {
+    width: 50vw;
+  }
+}

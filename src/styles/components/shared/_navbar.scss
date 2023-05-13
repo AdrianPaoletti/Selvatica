@@ -1,7 +1,4 @@
-@import "src/styles/abstracts/mixins";
-@import "src/styles/abstracts/variables";
-
-.navbar {
+.navbar-component {
   @include display-flex(space-between, flex-start);
   background-color: transparent;
   width: 100%;

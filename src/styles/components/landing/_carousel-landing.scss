@@ -1,5 +1,21 @@
+.carousel {
+  &__button {
+    font-size: 9rem;
+    color: $color-white;
+  }
+}
+
 //CAROUSEL BOOTSTRAP STYLES
 div.carousel {
+  &__mouse-out {
+    a.carousel-control-next {
+      animation: fadeOutArrowRight 0.3s ease-in;
+    }
+    a.carousel-control-prev {
+      animation: fadeOutArrowLeft 0.3s ease-in;
+    }
+  }
+
   a {
     opacity: 0;
     padding: 0 2.5rem;
@@ -15,13 +31,11 @@ div.carousel {
 
   a.carousel-control-next {
     justify-content: flex-end;
-    animation: fadeOutArrowRight 0.3s ease-in;
     transition: none;
   }
 
   a.carousel-control-prev {
     justify-content: flex-start;
-    animation: fadeOutArrowLeft 0.3s ease-in;
     transition: none;
   }
 

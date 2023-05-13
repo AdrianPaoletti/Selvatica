@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Carousel } from "react-bootstrap";
 
 import EastIcon from "@mui/icons-material/East";
@@ -10,11 +10,15 @@ interface CarouselLandingProps {
 }
 
 const CarouselLanding = ({ isMenuOpen }: CarouselLandingProps) => {
+  const [isMouseOut, setIsMouseOut] = useState<boolean>(false);
   return (
     <Carousel
       fade
       interval={null}
       indicators={false}
+      className={isMouseOut ? "carousel__mouse-out" : ""}
+      onMouseLeave={() => setIsMouseOut(true)}
+      onMouseEnter={() => setIsMouseOut(false)}
       prevIcon={
         <span className="carousel__button">
           <WestIcon fontSize="inherit" color="inherit" />
