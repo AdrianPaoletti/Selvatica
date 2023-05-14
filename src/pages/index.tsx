@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Head from "next/head";
 
 import BiodiversityLanding from "selvatica/components/Landing/BiodiversityLanding/BiodiversityLanding";
@@ -6,10 +6,10 @@ import CarouselLanding from "selvatica/components/Landing/CarouselLanding/Carous
 import ContactLanding from "selvatica/components/Landing/ContactLanding/ContactLanding";
 import ServicesLanding from "selvatica/components/Landing/ServicesLanding/ServicesLanding";
 import Navbar from "selvatica/components/shared/Navbar/Navbar";
+import SelvaticaContext from "selvatica/core/store/context/SelvaticaContext";
 
 export default function Landing() {
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-
+  const { isMenuOpen } = useContext(SelvaticaContext);
   return (
     <>
       <Head>
@@ -19,7 +19,6 @@ export default function Landing() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`landing`}>
-        <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
         <CarouselLanding isMenuOpen={isMenuOpen} />
         <ServicesLanding />
         <BiodiversityLanding />

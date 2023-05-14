@@ -1,9 +1,7 @@
-import Navbar from "selvatica/components/shared/Navbar/Navbar";
-
 const WhoWeAre = () => {
   return (
     <section>
-      <Navbar />
+      <h2 className="heading-secundary u-padding-top-bottom-medium"></h2>
     </section>
   );
 };
