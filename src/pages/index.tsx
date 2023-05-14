@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import Head from "next/head";
 
 import BiodiversityLanding from "selvatica/components/Landing/BiodiversityLanding/BiodiversityLanding";

@@ -13,8 +13,9 @@ const CarouselLanding = ({ isMenuOpen }: CarouselLandingProps) => {
   const [isMouseOut, setIsMouseOut] = useState<boolean>(false);
   return (
     <Carousel
+      id="carousel"
       fade
-      interval={null}
+      interval={10000}
       indicators={false}
       className={isMouseOut ? "carousel__mouse-out" : ""}
       onMouseLeave={() => setIsMouseOut(true)}

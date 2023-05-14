@@ -1,6 +1,6 @@
 const BiodiversityLanding = () => {
   return (
-    <section className="biodiversity u-padding-medium">
+    <section className="biodiversity u-padding-medium" id="biodiversity">
       <h2 className="heading-secundary u-padding-top-bottom-medium">
         Biodiversitat
       </h2>

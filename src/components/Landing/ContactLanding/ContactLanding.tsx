@@ -3,7 +3,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 
 const ContactLanding = () => {
   return (
-    <section className="contact u-padding-medium">
+    <section className="contact u-padding-medium" id="contact">
       <h2 className="heading-secundary u-padding-top-bottom-medium">
         Contacte
       </h2>

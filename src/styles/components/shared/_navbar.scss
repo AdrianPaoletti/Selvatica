@@ -21,6 +21,7 @@
   &__burger-menu {
     margin-top: 1rem;
     cursor: pointer;
+    z-index: 3;
 
     &--active {
       span {
@@ -41,7 +42,7 @@
 
   &__burger-menu-line {
     display: flex;
-    width: 6rem;
+    width: 5.5rem;
     height: 0.4rem;
     -webkit-transition: 1s cubic-bezier(0.07, 0.95, 0, 1);
     transition: 1s cubic-bezier(0.07, 0.95, 0, 1);
@@ -51,6 +52,21 @@
 }
 
 .slide {
+  background-color: transparent;
+  animation: fadeOutBackdrop 0.5s ease-in-out;
+  background-color: transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  &--active {
+    z-index: 2;
+    height: 100vh;
+    width: 100vw;
+    animation: fadeInBackdrop 0.5s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.45);
+  }
+
   &__menu {
     top: 0;
     height: 100vh;
@@ -71,6 +87,15 @@
     @include display-flex(center, flex-end, column);
     margin-bottom: 0;
     height: 100%;
+
+    a {
+      text-decoration: none;
+      color: $color-black;
+
+      &:hover {
+        color: $color-black;
+      }
+    }
   }
   &__list-item {
     font-size: 6.5rem;

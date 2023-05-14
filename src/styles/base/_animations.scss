@@ -46,22 +46,39 @@
   }
 }
 
-@keyframes fadeInBrightness {
+@keyframes fadeInBackdrop {
   0% {
-    filter: brightness(80%);
+    background-color: transparent;
+    width: 0;
+    height: 0;
+  }
+
+  1% {
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
   }
 
   100% {
-    filter: brightness(60%);
+    background-color: rgba(0, 0, 0, 0.45);
   }
 }
 
-@keyframes fadeOutBrightness {
+@keyframes fadeOutBackdrop {
   0% {
-    filter: brightness(60%);
+    background-color: rgba(0, 0, 0, 0.45);
+    width: 100vw;
+    height: 100vh;
+  }
+
+  99% {
+    background-color: transparent;
+    width: 100vw;
+    height: 100vh;
   }
 
   100% {
-    filter: brightness(80%);
+    width: 0;
+    height: 0;
   }
 }
