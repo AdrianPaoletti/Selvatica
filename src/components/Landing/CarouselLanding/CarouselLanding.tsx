@@ -11,6 +11,13 @@ interface CarouselLandingProps {
 
 const CarouselLanding = ({ isMenuOpen }: CarouselLandingProps) => {
   const [isMouseOut, setIsMouseOut] = useState<boolean>(false);
+  const images: { source: string }[] = [
+    { source: "/images/1-medium.jpg" },
+    { source: "/images/2-medium.jpg" },
+    { source: "/images/3-medium.jpg" },
+    { source: "/images/4-medium.jpg" },
+  ];
+
   return (
     <Carousel
       id="carousel"
@@ -31,24 +38,17 @@ const CarouselLanding = ({ isMenuOpen }: CarouselLandingProps) => {
         </span>
       }
     >
-      <Carousel.Item>
-        <img
-          className={`d-block carousel__image ${
-            isMenuOpen ? "carousel__image--active" : ""
-          }`}
-          src="/images/1-medium.jpg"
-          alt="arbicultura image"
-        />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className={`d-block carousel__image ${
-            isMenuOpen ? "carousel__image--active" : ""
-          }`}
-          src="/images/2-medium.jpg"
-          alt="arbicultura image"
-        />
-      </Carousel.Item>
+      {images.map(({ source }) => (
+        <Carousel.Item key={source}>
+          <img
+            className={`d-block carousel__image ${
+              isMenuOpen ? "carousel__image--active" : ""
+            }`}
+            src={source}
+            alt="arbicultura image"
+          />
+        </Carousel.Item>
+      ))}
     </Carousel>
   );
 };

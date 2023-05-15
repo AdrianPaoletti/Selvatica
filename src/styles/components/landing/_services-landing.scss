@@ -8,12 +8,10 @@
   &__link {
     position: relative;
     display: inline-block;
+    color: $color-black;
     cursor: pointer;
+    font-weight: 500;
     @include underline-effect(0.3rem, 1.6rem);
-
-    &:hover {
-      font-weight: 500;
-    }
   }
 
   &__photos {
@@ -32,6 +30,7 @@
     position: relative;
     padding-bottom: 100%;
     height: 0;
+    filter: brightness(90%);
 
     img {
       position: absolute;

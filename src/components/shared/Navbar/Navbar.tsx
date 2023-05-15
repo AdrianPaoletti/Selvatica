@@ -26,7 +26,7 @@ const Navbar = () => {
         setScrollFlag(false);
       }
     });
-    if (router.pathname === navbarItemList[0].id) {
+    if (navbarItemList.find(({ id }) => router.pathname === id)) {
       setIsWhite(false);
       return;
     }
@@ -35,20 +35,20 @@ const Navbar = () => {
 
   const navbarItemList = [
     {
+      id: "/servicios",
+      label: "Servicios",
+    },
+    {
       id: "/quienes-somos",
-      label: "Serveis",
+      label: "Quines somos",
     },
     {
-      id: "whoWeAre",
-      label: "Qui som",
+      id: "/#biodiversity",
+      label: "Biodiversidad",
     },
     {
-      id: "biodiversity",
-      label: "Biodiversitat",
-    },
-    {
-      id: "contact",
-      label: "Contacte",
+      id: "/#contact",
+      label: "Contacto",
     },
   ];
 
@@ -111,11 +111,7 @@ const Navbar = () => {
       >
         <ul className="slide__list">
           {navbarItemList.map(({ id, label }) => (
-            <Link
-              href={`${id.includes("/") ? id : "#" + id}`}
-              key={id}
-              scroll={false}
-            >
+            <Link href={id} key={id} scroll={false}>
               <li
                 className="slide__list-item"
                 onClick={() => setIsMenuOpen(false)}
