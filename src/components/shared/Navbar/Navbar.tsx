@@ -58,7 +58,7 @@ const Navbar = () => {
         scrollFlag ? "navbar-component--sticky" : ""
       }`}
     >
-      <Link href="/">
+      <Link href="/#carousel" scroll={false}>
         <img
           src={`${
             isWhite ? "/images/logo-white.png" : "/images/logo-black.png"
@@ -111,7 +111,11 @@ const Navbar = () => {
       >
         <ul className="slide__list">
           {navbarItemList.map(({ id, label }) => (
-            <Link href={`${id.includes("/") ? id : "#" + id}`} key={id}>
+            <Link
+              href={`${id.includes("/") ? id : "#" + id}`}
+              key={id}
+              scroll={false}
+            >
               <li
                 className="slide__list-item"
                 onClick={() => setIsMenuOpen(false)}
