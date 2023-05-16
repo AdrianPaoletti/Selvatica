@@ -102,6 +102,7 @@ const Navbar = () => {
         className={`slide ${isMenuOpen ? "slide--active" : ""} ${
           isFadeOutOn ? "slide--fade-on" : ""
         }`}
+        onClick={() => setIsMenuOpen(false)}
       ></div>
 
       <nav
