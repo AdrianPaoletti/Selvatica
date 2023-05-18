@@ -2,7 +2,7 @@ const BiodiversityLanding = () => {
   return (
     <section className="biodiversity u-padding-medium" id="biodiversity">
       <h2 className="heading-secundary u-padding-top-bottom-medium">
-        Biodiversidad
+        Ecosistema
       </h2>
       <div className="u-padding-top-bottom-medium">
         <p className="text-main u-margin-left-right-medium">
@@ -21,12 +21,12 @@ const BiodiversityLanding = () => {
           a reducir la temperatura del aire entre 2 y 8 grados centígrados,
           brindando espacios más frescos y saludables.
         </p>
-        <p className="text-main u-padding-top-bottom-medium u-margin-left-right-medium">
+        <p className="text-main u-margin-left-right-medium">
           En Selvatica, nos hemos propuesto el objetivo de convertir nuestras
           ciudades en entornos más verdes, frescos y saludables, mediante la
           promoción de árboles de alta calidad, más grandes y seguros. Nos
           enorgullece trabajar en la creación de áreas urbanas que beneficien
-          tanto a los seres humanos como a la biodiversidad que nos rodea.
+          tanto a los seres humanos como a la Ecosistema que nos rodea.
         </p>
       </div>
     </section>

@@ -17,17 +17,12 @@ const ServicesLanding = () => {
         </h2>
         <div className="u-padding-top-bottom-medium">
           <p className="text-main u-margin-left-right-medium">
-            Somos una empresa comprometida con la preservación y creación de
-            nuevos ecosistemas, con el fin de promover la diversidad biológica y
-            aprovechar todos sus beneficios. Contamos con un equipo profesional
-            altamente capacitado y comprometido con la conservación del medio
-            ambiente y el cuidado de la naturaleza.
-          </p>
-          <p className="text-main u-padding-top-bottom-medium u-margin-left-right-medium">
-            Estamos listos para brindarte soluciones adaptadas a tus necesidades
-            y contribuir al bienestar de tus espacios verdes mediante nuestros
-            servicios de plantación de árboles, sustentaciones, podas de altura
-            y difícil acceso, entre otros.
+            En Selvatica, somos expertos en el cuidado y mantenimiento de áreas
+            verdes. Ofrecemos servicios de plantación de árboles,
+            sustentaciones, podas de altura y difícil acceso, talas
+            justificadas, desbroces y jardinería. Nuestro equipo altamente
+            capacitado se enfoca en la conservación del medio ambiente y la
+            creación de espacios verdes armoniosos y atractivos.
           </p>
         </div>
         <Link href={"/servicios"} className="u-margin-left-auto">
@@ -44,7 +39,7 @@ const ServicesLanding = () => {
               hidden ? "services__photo--partial-hidden" : ""
             }`}
           >
-            <img src={source} alt="cenote zanzibar" />
+            <img src={source} alt="arboricultura" />
           </div>
         ))}
       </article>

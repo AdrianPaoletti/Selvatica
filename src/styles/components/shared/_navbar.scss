@@ -48,7 +48,6 @@
     transition: 1s cubic-bezier(0.07, 0.95, 0, 1);
     margin-bottom: 0.8rem;
     background: $color-white;
-
     &--black {
       background: $color-black;
     }
@@ -81,6 +80,7 @@
     position: fixed;
     background-color: $color-white;
     width: 38vw;
+    min-width: 50rem;
     max-width: 650px;
     margin-left: auto;
     right: -40vw;

@@ -20,10 +20,6 @@ div.carousel {
     opacity: 0;
     padding: 0 2.5rem;
 
-    &:hover {
-      opacity: 0;
-    }
-
     &:focus {
       opacity: 0;
     }
@@ -60,11 +56,6 @@ div.carousel {
       height: 100vh;
       width: 100vw;
       filter: brightness(80%);
-      // animation: fadeOutBrightness 0.5s ease-in-out;
-      &--active {
-        // filter: brightness(60%);
-        // animation: fadeInBrightness 0.5s ease-in-out;
-      }
     }
   }
 }

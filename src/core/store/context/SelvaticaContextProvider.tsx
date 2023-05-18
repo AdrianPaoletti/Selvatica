@@ -8,14 +8,12 @@ interface SelvaticaProviderProps {
 
 const SelvaticaContextProvider = ({ children }: SelvaticaProviderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const [isWhite, setIsWhite] = useState<boolean>(true);
+
   return (
     <SelvaticaContext.Provider
       value={{
         isMenuOpen,
         setIsMenuOpen,
-        isWhite,
-        setIsWhite,
       }}
     >
       {children}

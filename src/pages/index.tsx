@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Head from "next/head";
 
 import BiodiversityLanding from "selvatica/components/Landing/BiodiversityLanding/BiodiversityLanding";
@@ -10,6 +10,7 @@ import SelvaticaContext from "selvatica/core/store/context/SelvaticaContext";
 
 export default function Landing() {
   const { isMenuOpen } = useContext(SelvaticaContext);
+
   return (
     <>
       <Head>

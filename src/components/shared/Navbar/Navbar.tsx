@@ -8,30 +8,23 @@ import { useRouter } from "next/router";
 import SelvaticaContext from "selvatica/core/store/context/SelvaticaContext";
 
 const Navbar = () => {
-  const { isMenuOpen, setIsMenuOpen, isWhite, setIsWhite } =
-    useContext(SelvaticaContext);
+  const { isMenuOpen, setIsMenuOpen } = useContext(SelvaticaContext);
 
-  const router = useRouter();
-  const [scrollFlag, setScrollFlag] = useState<boolean>(false);
   const [isFadeOutOn, setIsFadeOutOn] = useState<boolean>(false);
-
-  const LOGO_WIDTH = 300;
-  const LOGO_HEIGHT = LOGO_WIDTH / 2.787;
+  const [scrollFlag, setScrollFlag] = useState<boolean>(false);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 10) {
         setScrollFlag(true);
-      } else {
-        setScrollFlag(false);
+        return;
       }
+      setScrollFlag(false);
     });
-    if (navbarItemList.find(({ id }) => router.pathname === id)) {
-      setIsWhite(false);
-      return;
-    }
-    setIsWhite(true);
-  }, [router.pathname]);
+  }, []);
+
+  const LOGO_WIDTH = 300;
+  const LOGO_HEIGHT = LOGO_WIDTH / 2.787;
 
   const navbarItemList = [
     {
@@ -44,7 +37,7 @@ const Navbar = () => {
     },
     {
       id: "/#biodiversity",
-      label: "Biodiversidad",
+      label: "Ecosistema",
     },
     {
       id: "/#contact",
@@ -60,9 +53,7 @@ const Navbar = () => {
     >
       <Link href="/#carousel" scroll={false}>
         <img
-          src={`${
-            isWhite ? "/images/logo-white.png" : "/images/logo-black.png"
-          }`}
+          src="/images/logo-white.png"
           width={LOGO_WIDTH}
           height={LOGO_HEIGHT}
           alt="logo selvatica arbicoltura"
@@ -81,21 +72,9 @@ const Navbar = () => {
           setIsFadeOutOn(true);
         }}
       >
-        <span
-          className={`navbar-component__burger-menu-line ${
-            isWhite ? "" : "navbar-component__burger-menu-line--black"
-          }`}
-        ></span>
-        <span
-          className={`navbar-component__burger-menu-line ${
-            isWhite ? "" : "navbar-component__burger-menu-line--black"
-          }`}
-        ></span>
-        <span
-          className={`navbar-component__burger-menu-line ${
-            isWhite ? "" : "navbar-component__burger-menu-line--black"
-          }`}
-        ></span>
+        <span className="navbar-component__burger-menu-line"></span>
+        <span className="navbar-component__burger-menu-line"></span>
+        <span className="navbar-component__burger-menu-line"></span>
       </div>
 
       <div
