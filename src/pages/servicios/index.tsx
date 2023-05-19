@@ -36,7 +36,7 @@ const Services = () => {
           <h2 className="heading-secundary u-padding-top-bottom-medium">
             Servicios
           </h2>
-          <p className="text-main u-padding-top-bottom-medium u-margin-left-right-medium">
+          <p className="text-main u-padding-top-bottom-medium  ">
             Los árboles grandes desempeñan un papel fundamental como filtros
             naturales, capturando y reteniendo contaminantes urbanos y
             partículas finas, como polvo, suciedad y humo, en sus hojas y
@@ -44,7 +44,7 @@ const Services = () => {
             ciudades puede contribuir a reducir la temperatura del aire entre 2
             y 8 grados centígrados, brindando espacios más frescos y saludables.
           </p>
-          <p className="text-main u-margin-left-right-medium u-padding-bottom-medium ">
+          <p className="text-main   u-padding-bottom-medium ">
             En Selvatica, nos hemos propuesto el objetivo de convertir nuestras
             ciudades en entornos más verdes, frescos y saludables, mediante la
             promoción de árboles de alta calidad, más grandes y seguros. Nos
@@ -59,14 +59,9 @@ const Services = () => {
         </div>
         <div className="service__text service__text--video">
           {services.map(({ title, text }) => (
-            <div
-              className="text-main u-padding-top-bottom-small u-margin-left-right-medium"
-              key={title}
-            >
+            <div className="text-main u-padding-top-bottom-small  " key={title}>
               <h3 className="heading-terciary">{title}</h3>
-              <p className="text-main u-padding-top-bottom-medium u-margin-left-right-medium">
-                {text}
-              </p>
+              <p className="text-main u-padding-top-bottom-medium  ">{text}</p>
             </div>
           ))}
         </div>

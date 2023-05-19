@@ -1,8 +1,9 @@
 .who-we-are {
-  > img {
+  &__image-header {
     width: 100vw;
     height: 50vh;
     object-fit: cover;
+    overflow: auto;
     filter: brightness(75%);
   }
   &__block {

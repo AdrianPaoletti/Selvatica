@@ -56,7 +56,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`navbar-component u-padding-medium ${
+      className={`u-padding-medium navbar-component ${
         scrollFlag ? "navbar-component--sticky" : ""
       }`}
     >

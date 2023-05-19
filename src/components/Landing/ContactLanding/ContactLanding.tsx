@@ -1,13 +1,9 @@
-import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 
 const ContactLanding = () => {
   return (
-    <section
-      className="contact u-padding-medium u-margin-left-right-medium"
-      id="contact"
-    >
+    <section className="contact u-padding-medium  " id="contact">
       <h2 className="heading-secundary u-padding-top-bottom-medium">
         Contacto
       </h2>
@@ -23,12 +19,9 @@ const ContactLanding = () => {
             </p>
             <p className="contact-text text-main">+34 657 099 946</p>
           </div>
-          <div className="contact__social-media">
+          <div className="contact__social-media contact__social-media--desktop">
             <a href="https://instagram.com/selvatica.arboricultura?igshid=MzRlODBiNWFlZA==">
               <InstagramIcon fontSize="inherit" color="inherit" />
-            </a>
-            <a href="https://instagram.com/selvatica.arboricultura?igshid=MzRlODBiNWFlZA==">
-              <FacebookIcon fontSize="inherit" color="inherit" />
             </a>
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=selvatica.arboricultura@gmail.com">
               <MailOutlineIcon fontSize="inherit" color="inherit" />
@@ -45,6 +38,14 @@ const ContactLanding = () => {
               title="cenote zanzibar"
             ></iframe>
           </div>
+        </div>
+        <div className="contact__social-media contact__social-media--mobile">
+          <a href="https://instagram.com/selvatica.arboricultura?igshid=MzRlODBiNWFlZA==">
+            <InstagramIcon fontSize="inherit" color="inherit" />
+          </a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=selvatica.arboricultura@gmail.com">
+            <MailOutlineIcon fontSize="inherit" color="inherit" />
+          </a>
         </div>
       </article>
     </section>

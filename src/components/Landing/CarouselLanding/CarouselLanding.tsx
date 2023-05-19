@@ -25,7 +25,7 @@ const CarouselLanding = ({ isMenuOpen }: CarouselLandingProps) => {
   return (
     <Carousel
       id="carousel"
-      fade={screenWidth > 800}
+      fade
       interval={10000}
       indicators={false}
       touch

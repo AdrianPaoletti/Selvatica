@@ -11,9 +11,9 @@ const ServicesLanding = () => {
   ];
   return (
     <section className="services">
-      <article className="services__text u-padding-medium u-margin-left-right-medium">
+      <article className="services__text u-padding-medium ">
         <h2 className="heading-secundary u-padding-top-bottom-medium ">
-          En Selvatica ...
+          En Selvatica
         </h2>
         <div className="u-padding-top-bottom-medium">
           <p className="text-main ">

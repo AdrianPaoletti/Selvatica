@@ -1,9 +1,6 @@
 const BiodiversityLanding = () => {
   return (
-    <section
-      className="biodiversity u-padding-medium u-margin-left-right-medium"
-      id="biodiversity"
-    >
+    <section className="biodiversity u-padding-medium" id="biodiversity">
       <h2 className="heading-secundary u-padding-top-bottom-medium ">
         Ecosistema
       </h2>
@@ -16,7 +13,7 @@ const BiodiversityLanding = () => {
           habitaron nuestros árboles. A quién no le gusta contemplar la gracia
           de una ardilla en su entorno natural.
         </p>
-        <p className="text-main u-padding-top-bottom-medium ">
+        <p className="text-main u-padding-top-bottom-medium">
           Los árboles grandes desempeñan un papel fundamental como filtros
           naturales, capturando y reteniendo contaminantes urbanos y partículas
           finas, como polvo, suciedad y humo, en sus hojas y corteza. Además, la

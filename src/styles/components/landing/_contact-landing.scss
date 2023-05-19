@@ -44,5 +44,40 @@
         color: $color-black;
       }
     }
+
+    &--mobile {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .contact {
+    &-content {
+      @include display-flex(space-between, flex-start, column);
+    }
+    &-block {
+      width: 100%;
+
+      &--map {
+        padding-left: 0;
+      }
+
+      &__map {
+        padding-bottom: 100%;
+        padding-right: 50.25%;
+      }
+    }
+
+    &__social-media {
+      &--desktop {
+        display: none;
+      }
+      &--mobile {
+        @include display-flex(flex-end);
+        width: 100%;
+        margin-top: 2.5rem;
+      }
+    }
   }
 }
