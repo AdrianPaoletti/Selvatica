@@ -3,15 +3,15 @@
 
 import { useContext, useEffect, useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 import SelvaticaContext from "selvatica/core/store/context/SelvaticaContext";
 
 const Navbar = () => {
+  const LOGO_WIDTH = 300;
   const { isMenuOpen, setIsMenuOpen } = useContext(SelvaticaContext);
-
   const [isFadeOutOn, setIsFadeOutOn] = useState<boolean>(false);
   const [scrollFlag, setScrollFlag] = useState<boolean>(false);
+  const [logoWidth, setLogoWidth] = useState<number>(LOGO_WIDTH);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -21,10 +21,19 @@ const Navbar = () => {
       }
       setScrollFlag(false);
     });
+    window.onresize = () => {
+      resizeWindow();
+    };
+    resizeWindow();
   }, []);
 
-  const LOGO_WIDTH = 300;
-  const LOGO_HEIGHT = LOGO_WIDTH / 2.787;
+  const resizeWindow = () => {
+    if (window.innerWidth < 800) {
+      setLogoWidth(150);
+      return;
+    }
+    setLogoWidth(LOGO_WIDTH);
+  };
 
   const navbarItemList = [
     {
@@ -54,8 +63,8 @@ const Navbar = () => {
       <Link href="/#carousel" scroll={false}>
         <img
           src="/images/logo-white.png"
-          width={LOGO_WIDTH}
-          height={LOGO_HEIGHT}
+          width={logoWidth}
+          height={logoWidth / 2.787}
           alt="logo selvatica arbicoltura"
           className={`navbar-component__logo ${
             scrollFlag ? "navbar-component__logo--sticky" : ""

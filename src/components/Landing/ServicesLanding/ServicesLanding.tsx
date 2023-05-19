@@ -11,12 +11,12 @@ const ServicesLanding = () => {
   ];
   return (
     <section className="services">
-      <article className="services__text u-padding-medium">
-        <h2 className="heading-secundary u-padding-top-bottom-medium">
+      <article className="services__text u-padding-medium u-margin-left-right-medium">
+        <h2 className="heading-secundary u-padding-top-bottom-medium ">
           En Selvatica ...
         </h2>
         <div className="u-padding-top-bottom-medium">
-          <p className="text-main u-margin-left-right-medium">
+          <p className="text-main ">
             En Selvatica, somos expertos en el cuidado y mantenimiento de áreas
             verdes. Ofrecemos servicios de plantación de árboles,
             sustentaciones, podas de altura y difícil acceso, talas
@@ -26,7 +26,7 @@ const ServicesLanding = () => {
           </p>
         </div>
         <Link href={"/servicios"} className="u-margin-left-auto">
-          <p className="text-main u-padding-top-bottom-medium u-margin-left-right-medium services__link">
+          <p className="text-main u-padding-top-bottom-medium services__link">
             Servicios
           </p>
         </Link>

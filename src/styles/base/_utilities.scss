@@ -67,3 +67,9 @@
 .u-bold {
   font-weight: 600;
 }
+
+@media (max-width: 800px) {
+  .u-padding-medium {
+    padding: 1.25rem 1.5rem;
+  }
+}

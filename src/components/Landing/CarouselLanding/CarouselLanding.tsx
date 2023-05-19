@@ -1,9 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Carousel } from "react-bootstrap";
 
 import EastIcon from "@mui/icons-material/East";
 import WestIcon from "@mui/icons-material/West";
+import SelvaticaContext from "selvatica/core/store/context/SelvaticaContext";
 
 interface CarouselLandingProps {
   isMenuOpen: boolean;
@@ -11,31 +12,39 @@ interface CarouselLandingProps {
 
 const CarouselLanding = ({ isMenuOpen }: CarouselLandingProps) => {
   const [isMouseOut, setIsMouseOut] = useState<boolean>(false);
+  const [screenWidth, setScreenWidth] = useState<number>(0);
+  useEffect(() => {
+    setScreenWidth(window.innerWidth);
+  }, []);
   const images: { source: string }[] = [
     { source: "/images/3-medium.jpg" },
     { source: "/images/8-medium.jpg" },
     { source: "/images/7-medium.jpg" },
     { source: "/images/2-medium.jpg" },
   ];
-
   return (
     <Carousel
       id="carousel"
-      fade
+      fade={screenWidth > 800}
       interval={10000}
       indicators={false}
+      touch
       className={isMouseOut ? "carousel__mouse-out" : ""}
       onMouseLeave={() => setIsMouseOut(true)}
       onMouseEnter={() => setIsMouseOut(false)}
       prevIcon={
-        <span className="carousel__button">
-          <WestIcon fontSize="inherit" color="inherit" />
-        </span>
+        screenWidth > 800 && (
+          <span className="carousel__button">
+            <WestIcon fontSize="inherit" color="inherit" />
+          </span>
+        )
       }
       nextIcon={
-        <span className="carousel__button">
-          <EastIcon fontSize="inherit" color="inherit" />
-        </span>
+        screenWidth > 800 && (
+          <span className="carousel__button">
+            <EastIcon fontSize="inherit" color="inherit" />
+          </span>
+        )
       }
     >
       {images.map(({ source }) => (
