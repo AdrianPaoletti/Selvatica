@@ -12,10 +12,10 @@ interface CarouselLandingProps {
 const CarouselLanding = ({ isMenuOpen }: CarouselLandingProps) => {
   const [isMouseOut, setIsMouseOut] = useState<boolean>(false);
   const images: { source: string }[] = [
-    { source: "/images/1-medium.jpg" },
-    { source: "/images/2-medium.jpg" },
     { source: "/images/3-medium.jpg" },
-    { source: "/images/4-medium.jpg" },
+    { source: "/images/8-medium.jpg" },
+    { source: "/images/7-medium.jpg" },
+    { source: "/images/2-medium.jpg" },
   ];
 
   return (

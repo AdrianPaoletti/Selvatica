@@ -1,0 +1,33 @@
+.who-we-are {
+  & > img {
+    width: 100vw;
+    height: 50vh;
+    object-fit: cover;
+    filter: brightness(75%);
+  }
+  &__block {
+    @include display-flex(initial, flex-start);
+    background-color: $color-gray-background;
+  }
+  &__image {
+    position: relative;
+
+    img {
+      filter: brightness(85%);
+    }
+  }
+
+  &__team-images {
+    @include display-flex(initial);
+    gap: 3rem;
+  }
+
+  &__names {
+    color: $color-white;
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+    font-size: 2.3rem;
+    letter-spacing: 1.6px;
+  }
+}

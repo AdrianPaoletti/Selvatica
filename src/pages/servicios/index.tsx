@@ -60,7 +60,7 @@ const Services = () => {
         <div className="service__text service__text--video">
           {services.map(({ title, text }) => (
             <div
-              className="text-main u-padding-top-bottom-medium u-margin-left-right-medium"
+              className="text-main u-padding-top-bottom-small u-margin-left-right-medium"
               key={title}
             >
               <h3 className="heading-terciary">{title}</h3>

@@ -19,6 +19,9 @@
       overflow-y: auto;
       padding-right: 5rem;
       margin-right: 5rem;
+      &::-webkit-scrollbar-thumb {
+        border: 0.6rem solid rgba(0, 0, 0, 0.841);
+      }
     }
   }
 
@@ -30,5 +33,9 @@
 
   &__video-container {
     width: 100%;
+
+    video {
+      display: block;
+    }
   }
 }
