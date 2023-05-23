@@ -72,7 +72,7 @@ const Navbar = () => {
         />
       </Link>
 
-      <div
+      {/* <div
         className={`navbar-component__burger-menu ${
           isMenuOpen ? "navbar-component__burger-menu--active" : ""
         }`}
@@ -114,7 +114,7 @@ const Navbar = () => {
           <span>Cat</span>
           <span className="u-margin-left-medium">Es</span>
         </div>
-      </nav>
+      </nav> */}
     </header>
   );
 };

@@ -1,2 +1,29 @@
 .landing {
 }
+
+.provisional {
+  @include display-flex(center, center, column);
+  flex-wrap: wrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  color: white;
+  font-size: 5rem;
+
+  &__text {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .provisional {
+    font-size: 3rem;
+
+    &__text {
+      font-size: 2rem;
+      text-align: center;
+    }
+  }
+}

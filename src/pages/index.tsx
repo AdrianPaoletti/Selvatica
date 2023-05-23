@@ -21,9 +21,15 @@ export default function Landing() {
       </Head>
       <main className={`landing`}>
         <CarouselLanding isMenuOpen={isMenuOpen} />
-        <ServicesLanding />
+        <div className="provisional">
+          <p>Proximamente...</p>
+          <p className="provisional__text">
+            +34 657 099 946 | selvatica.arboricultura@gmail.com
+          </p>
+        </div>
+        {/* <ServicesLanding />
         <BiodiversityLanding />
-        <ContactLanding />
+        <ContactLanding /> */}
       </main>
     </>
   );
