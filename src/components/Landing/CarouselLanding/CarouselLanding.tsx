@@ -20,7 +20,7 @@ const CarouselLanding = ({ isMenuOpen }: CarouselLandingProps) => {
     { source: "/images/3-medium.jpg" },
     { source: "/images/8-medium.jpg" },
     { source: "/images/7-medium.jpg" },
-    { source: "/images/2-medium.jpg" },
+    { source: "/images/9-medium.jpg" },
   ];
   return (
     <Carousel
