@@ -36,9 +36,9 @@ const WhoWeAre = () => {
           <div className="who-we-are__image">
             <img
               src="https://simbiosiestudi.com/wp-content/uploads/2022/10/DSCF9358-3-1-scaled.jpg"
-              alt=""
               height={600}
               width={420}
+              alt=""
             />
             <div className="who-we-are__names">
               <p>Marcos Lopez</p>

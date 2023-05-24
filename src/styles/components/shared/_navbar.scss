@@ -13,6 +13,9 @@
 
   &__logo {
     transition: all 0.5s;
+    width: 300px;
+    height: calc(300px / 2.787);
+
     &--sticky {
       width: 150px;
       height: calc(150px / 2.787);
@@ -92,6 +95,7 @@
     @include display-flex(center, flex-end, column);
     margin-bottom: 0;
     height: 100%;
+    padding-left: 0;
 
     a {
       text-decoration: none;
@@ -125,6 +129,12 @@
 @media (max-width: 800px) {
   .navbar-component {
     padding: 1.5rem;
+
+    &__logo{
+      width: 150px;
+      height: calc(150px / 2.787);
+    }
+
     &__burger-menu {
       margin-top: 1.55rem;
       &--active {
@@ -152,6 +162,7 @@
       right: -100vw;
       width: 100vw;
       @include display-flex(space-between, center, column);
+
       &--active {
         right: 0;
       }

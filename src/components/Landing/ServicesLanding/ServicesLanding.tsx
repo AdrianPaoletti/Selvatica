@@ -3,10 +3,10 @@
 import Link from "next/link";
 
 const ServicesLanding = () => {
-  const images: { source: string; hidden?: boolean }[] = [
+  const images: { source: string; id?: string; hidden?: boolean }[] = [
     { source: "/images/1-service.jpg" },
     { source: "/images/2-service.jpg" },
-    { source: "/images/3-service.jpg" },
+    { source: "/images/3-service.jpg", id: "biodiversity" },
     { source: "/images/4-service.jpg", hidden: true },
   ];
   return (
@@ -32,12 +32,13 @@ const ServicesLanding = () => {
         </Link>
       </article>
       <article className="services__photos u-padding-large ">
-        {images.map(({ source, hidden }, imageIndex) => (
+        {images.map(({ source, hidden, id }, imageIndex) => (
           <div
             key={imageIndex}
             className={`services__photo ${
               hidden ? "services__photo--partial-hidden" : ""
             }`}
+            id={id}
           >
             <img src={source} alt="arboricultura" />
           </div>

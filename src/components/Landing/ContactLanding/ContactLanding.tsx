@@ -3,7 +3,7 @@ import MailOutlineIcon from "@mui/icons-material/MailOutline";
 
 const ContactLanding = () => {
   return (
-    <section className="contact u-padding-medium  " id="contact">
+    <section className="contact u-padding-medium">
       <h2 className="heading-secundary u-padding-top-bottom-medium">
         Contacto
       </h2>

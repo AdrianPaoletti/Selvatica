@@ -1,11 +1,10 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import Head from "next/head";
 
 import BiodiversityLanding from "selvatica/components/Landing/BiodiversityLanding/BiodiversityLanding";
 import CarouselLanding from "selvatica/components/Landing/CarouselLanding/CarouselLanding";
 import ContactLanding from "selvatica/components/Landing/ContactLanding/ContactLanding";
 import ServicesLanding from "selvatica/components/Landing/ServicesLanding/ServicesLanding";
-import Navbar from "selvatica/components/shared/Navbar/Navbar";
 import SelvaticaContext from "selvatica/core/store/context/SelvaticaContext";
 
 export default function Landing() {

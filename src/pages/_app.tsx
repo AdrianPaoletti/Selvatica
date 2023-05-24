@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
 
@@ -9,11 +9,14 @@ import "selvatica/styles/main.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function App({ Component, pageProps }: AppProps) {
-  const { pathname } = useRouter();
+  const {pathname, asPath} = useRouter();
+  const pathNames = useMemo(() => (["servicios", "quienes-somos"]), []);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if(asPath === "/#carousel" || pathNames.includes(pathname)){
+      window.scrollTo(0, 0);
+    }
+  }, [asPath, pathNames, pathname]);
 
   return (
     <SelvaticaContextProvider>
