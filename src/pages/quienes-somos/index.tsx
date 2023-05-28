@@ -7,6 +7,8 @@ const WhoWeAre = () => {
         className="who-we-are__image-header"
         src="/images/5-medium.jpg"
         alt=""
+
+        
       />
       <article className="who-we-are__block u-padding-medium ">
         <div className="who-we-are__text">
@@ -38,7 +40,7 @@ const WhoWeAre = () => {
               src="https://simbiosiestudi.com/wp-content/uploads/2022/10/DSCF9358-3-1-scaled.jpg"
               height={600}
               width={420}
-              alt=""
+              alt=''
             />
             <div className="who-we-are__names">
               <p>Marcos Lopez</p>

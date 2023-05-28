@@ -2,16 +2,17 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { useContext, useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import Link from "next/link";
 
 import SelvaticaContext from "selvatica/core/store/context/SelvaticaContext";
-import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const { isMenuOpen, setIsMenuOpen } = useContext(SelvaticaContext);
   const [isFadeOutOn, setIsFadeOutOn] = useState<boolean>(false);
   const [scrollFlag, setScrollFlag] = useState<boolean>(false);
-  const {t} = useTranslation("common");
+  const { t, i18n } = useTranslation(["common"]);
+  const [languageSelected, setLanguageSelected] = useState<string>("es");
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -99,8 +100,28 @@ const Navbar = () => {
           ))}
         </ul>
         <div className="slide__languages">
-          <span>Cat</span>
-          <span className="u-margin-left-medium">Es</span>
+          <span
+            className={`slide__language ${
+              languageSelected === "cat" && "slide__language--selected"
+            }`}
+            onClick={() => {
+              i18n.changeLanguage("cat");
+              setLanguageSelected("cat");
+            }}
+          >
+            Cat
+          </span>
+          <span
+            className={`slide__language ${
+              languageSelected === "es" && "slide__language--selected"
+            } u-margin-left-medium`}
+            onClick={() => {
+              i18n.changeLanguage("es");
+              setLanguageSelected("es");
+            }}
+          >
+            Es
+          </span>
         </div>
       </nav>
     </header>

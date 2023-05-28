@@ -2,8 +2,15 @@
   "parserOptions": {
     "sourceType": "module"
   },
-  "extends": ["next/core-web-vitals", "prettier"],
-  "plugins": ["react", "simple-import-sort", "import"],
+  "extends": [
+    "next/core-web-vitals",
+    "prettier"
+  ],
+  "plugins": [
+    "react",
+    "simple-import-sort",
+    "import"
+  ],
   "rules": {
     "no-param-reassign": "off",
     "no-plusplus": "off",
@@ -18,9 +25,16 @@
       "error",
       {
         "groups": [
-          ["^react", "^next"],
-          ["^[^.](\\w)"],
-          ["^\\u0000"],
+          [
+            "^react",
+            "^next"
+          ],
+          [
+            "^[^.](\\w)"
+          ],
+          [
+            "^\\u0000"
+          ],
           [
             "^(resources-management)(/.*|$)",
             "^\\.\\.(?!/?$)",
@@ -28,7 +42,9 @@
             "^\\.(?!/?$)",
             "^\\./?$"
           ],
-          ["^.+\\.s?css$"]
+          [
+            "^.+\\.s?css$"
+          ]
         ]
       }
     ]

@@ -1,6 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 
+import { useEffect, useState } from "react";
+
 const Services = () => {
+  const [showControls, setShowControls] = useState<boolean>(false);
+  useEffect(() => {
+    if (window.innerWidth < 1100) {
+      setShowControls(true);
+    }
+  }, []);
+
   const services = [
     {
       title: "Plantación de árboles",
@@ -53,15 +62,22 @@ const Services = () => {
           </p>
         </div>
       </article>
-      <article className="service__video ">
+      <article className="service__video">
         <div className="service__video-container">
-          <video src="/video/video-2.mp4" width={628} autoPlay loop muted />
+          <video
+            src="/video/video-2.mp4"
+            width={585}
+            controls={showControls}
+            autoPlay={!showControls}
+            loop={!showControls}
+            muted
+          />
         </div>
         <div className="service__text service__text--video">
           {services.map(({ title, text }) => (
             <div className="text-main u-padding-top-bottom-small  " key={title}>
               <h3 className="heading-terciary">{title}</h3>
-              <p className="text-main u-padding-top-bottom-medium  ">{text}</p>
+              <p className="text-main u-padding-top-bottom-medium">{text}</p>
             </div>
           ))}
         </div>

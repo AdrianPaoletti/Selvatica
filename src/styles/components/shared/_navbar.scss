@@ -118,10 +118,14 @@
 
   &__languages {
     font-size: 3.5rem;
-    span {
-      &:last-child {
-        color: $color-disabled;
-      }
+  }
+
+  &__language {
+    cursor: pointer;
+    color: $color-disabled;
+
+    &--selected {
+      color: $color-black;
     }
   }
 }
@@ -130,7 +134,7 @@
   .navbar-component {
     padding: 1.5rem;
 
-    &__logo{
+    &__logo {
       width: 150px;
       height: calc(150px / 2.787);
     }
