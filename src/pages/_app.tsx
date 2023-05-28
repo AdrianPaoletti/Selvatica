@@ -11,7 +11,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function App({ Component, pageProps }: AppProps) {
   const { pathname, asPath } = useRouter();
-  const pathNames = useMemo(() => ["servicios", "quienes-somos"], []);
+  const pathNames = useMemo(() => ["/servicios", "/quienes-somos"], []);
 
   useEffect(() => {
     if (asPath === "/#carousel" || pathNames.includes(pathname)) {
