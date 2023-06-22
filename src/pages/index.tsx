@@ -20,7 +20,7 @@ export default function Landing() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`landing`}>
-        <CarouselLanding isMenuOpen={isMenuOpen} />
+        {/* <CarouselLanding isMenuOpen={isMenuOpen} /> */}
         <div className="provisional">
           <p>Proximamente...</p>
           <p className="provisional__text">

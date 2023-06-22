@@ -62,7 +62,7 @@ const Navbar = () => {
     >
       <Link href="/#carousel" scroll={false}>
         <img
-          src="/images/logo-white.png"
+          src="/images/logo-black.png"
           width={logoWidth}
           height={logoWidth / 2.787}
           alt="logo selvatica arbicoltura"
