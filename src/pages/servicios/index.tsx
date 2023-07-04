@@ -30,7 +30,7 @@ const Services = () => {
 
   return (
     <section className="services-page">
-      <img src="/images/10-medium.jpg" alt="" />
+      {/* <img src="/images/10-medium.jpg" alt="" />
       <article className="service__block u-padding-medium u-margin-bottom-medium-large">
         <div className="service__text">
           <h2 className="heading-secundary u-padding-top-bottom-medium">
@@ -65,7 +65,7 @@ const Services = () => {
             </div>
           ))}
         </div>
-      </article>
+      </article> */}
     </section>
   );
 };

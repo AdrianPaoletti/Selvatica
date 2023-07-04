@@ -3,7 +3,7 @@
 const WhoWeAre = () => {
   return (
     <section className="who-we-are">
-      <img
+      {/* <img
         className="who-we-are__image-header"
         src="/images/5-medium.jpg"
         alt=""
@@ -58,7 +58,7 @@ const WhoWeAre = () => {
             </div>
           </div>
         </div>
-      </article>
+      </article> */}
     </section>
   );
 };
