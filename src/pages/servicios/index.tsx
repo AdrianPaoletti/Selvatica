@@ -3,12 +3,12 @@
 import { useEffect, useState } from "react";
 
 const Services = () => {
-  const [showControls, setShowControls] = useState<boolean>(false);
-  useEffect(() => {
-    if (window.innerWidth < 1100) {
-      setShowControls(true);
-    }
-  }, []);
+  // const [showControls, setShowControls] = useState<boolean>(false);
+  // useEffect(() => {
+  //   if (window.innerWidth < 1100) {
+  //     setShowControls(true);
+  //   }
+  // }, []);
 
   const services = [
     {
@@ -69,7 +69,7 @@ const Services = () => {
             width={585}
             controls
             autoPlay
-            loop={!showControls}
+            loop
             muted
           />
         </div>
