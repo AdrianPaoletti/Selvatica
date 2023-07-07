@@ -5,7 +5,7 @@
   position: fixed;
   z-index: 3;
   transition: all 0.3s;
-  padding: 2.5rem 3rem;
+  padding: 1.75rem 3rem;
 
   &--sticky {
     background-color: rgba(0, 0, 0, 0.85);
@@ -13,8 +13,8 @@
 
   &__logo {
     transition: all 0.5s;
-    width: 300px;
-    height: calc(300px / 2.787);
+    width: 230px;
+    height: calc(230px / 2.787);
 
     &--sticky {
       width: 150px;
@@ -46,8 +46,8 @@
 
   &__burger-menu-line {
     display: flex;
-    width: 5.5rem;
-    height: 0.4rem;
+    width: 4.5rem;
+    height: 0.35rem;
     -webkit-transition: 1s cubic-bezier(0.07, 0.95, 0, 1);
     transition: 1s cubic-bezier(0.07, 0.95, 0, 1);
     margin-bottom: 0.8rem;
@@ -84,7 +84,7 @@
     width: 650px;
     margin-left: auto;
     right: -75vw;
-    width: 60rem;
+    width: 50rem;
     transition: all 0.5s ease-in-out;
     @include display-flex(space-between, flex-end, column);
     &--active {
@@ -107,7 +107,7 @@
     }
   }
   &__list-item {
-    font-size: 6.5rem;
+    font-size: 5rem;
     list-style: none;
     font-weight: 400;
     cursor: pointer;
@@ -117,7 +117,7 @@
   }
 
   &__languages {
-    font-size: 3.5rem;
+    font-size: $font-size-normal-large;
   }
 
   &__language {

@@ -67,8 +67,8 @@ const Services = () => {
           <video
             src="/video/video-2.mp4"
             width={585}
-            controls={showControls}
-            autoPlay={!showControls}
+            controls
+            autoPlay
             loop={!showControls}
             muted
           />

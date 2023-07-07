@@ -50,9 +50,7 @@ const CarouselLanding = ({ isMenuOpen }: CarouselLandingProps) => {
       {images.map(({ source }) => (
         <Carousel.Item key={source}>
           <img
-            className={`d-block carousel__image ${
-              isMenuOpen ? "carousel__image--active" : ""
-            }`}
+            className={`d-block carousel__image`}
             src={source}
             alt="arbicultura image"
           />

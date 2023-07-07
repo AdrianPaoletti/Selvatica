@@ -1,6 +1,6 @@
 .who-we-are {
   &__image-header {
-    width: 100vw;
+    width: 100%;
     height: 50vh;
     object-fit: cover;
     overflow: auto;
@@ -37,9 +37,9 @@
   &__names {
     color: $color-white;
     position: absolute;
-    bottom: 3rem;
+    bottom: 1.5rem;
     left: 3rem;
-    font-size: 2.3rem;
+    font-size: 2.2rem;
     letter-spacing: 1.6px;
   }
 }

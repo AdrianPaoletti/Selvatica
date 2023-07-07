@@ -52,8 +52,6 @@ const Navbar = () => {
       <Link href="/#carousel" scroll={false}>
         <img
           src="/images/logo-white.png"
-          // width={logoWidth}
-          // height={logoWidth / 2.787}
           alt="logo selvatica arbicoltura"
           className={`navbar-component__logo ${
             scrollFlag ? "navbar-component__logo--sticky" : ""
