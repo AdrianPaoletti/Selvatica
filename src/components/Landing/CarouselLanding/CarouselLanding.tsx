@@ -1,10 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Carousel } from "react-bootstrap";
 
 import EastIcon from "@mui/icons-material/East";
 import WestIcon from "@mui/icons-material/West";
-import SelvaticaContext from "selvatica/core/store/context/SelvaticaContext";
 
 interface CarouselLandingProps {
   isMenuOpen: boolean;

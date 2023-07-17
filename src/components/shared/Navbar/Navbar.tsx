@@ -31,7 +31,7 @@ const Navbar = () => {
     },
     {
       id: "/quienes-somos",
-      label: "who-we-are",
+      label: "who_we_are",
     },
     {
       id: "/#biodiversity",

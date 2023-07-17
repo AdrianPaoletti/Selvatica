@@ -1,21 +1,24 @@
+import { useTranslation } from "react-i18next";
+
 import InstagramIcon from "@mui/icons-material/Instagram";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 
 const ContactLanding = () => {
+  const { t } = useTranslation(["common"]);
   return (
     <section className="contact u-padding-medium">
       <h2 className="heading-secundary u-padding-top-bottom-medium">
-        Contacto
+        {t("contact")}
       </h2>
       <article className="contact-content">
         <div className="contact-block contact-block--info u-padding-top-medium">
           <div>
-            <p className="contact-text text-main u-bold">Dirección</p>
+            <p className="contact-text text-main u-bold">{t("address")}</p>
             <p className="contact-text text-main">
               Paseo marítimo 201, 08860 – Castelldefels (Barcelona)
             </p>
             <p className="contact-text text-main u-bold u-padding-top-medium">
-              Contacto
+              {t("contact")}
             </p>
             <p className="contact-text text-main">+34 657 099 946</p>
           </div>
@@ -35,8 +38,8 @@ const ContactLanding = () => {
               width="300"
               height="400"
               frameBorder="0"
-              title="cenote zanzibar"
-            ></iframe>
+              title="maps google addresse"
+            />
           </div>
         </div>
         <div className="contact__social-media contact__social-media--mobile">
