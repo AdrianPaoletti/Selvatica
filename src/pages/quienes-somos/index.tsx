@@ -31,10 +31,10 @@ const WhoWeAre = () => {
         <h3 className="heading-terciary u-padding-top-bottom-medium">
           {t("team")}
         </h3>
-        {/* <div className="who-we-are__team-images u-padding-top-medium">
+        <div className="who-we-are__team-images u-padding-top-medium">
           <div className="who-we-are__image">
             <img
-              src="https://simbiosiestudi.com/wp-content/uploads/2022/10/DSCF9358-3-1-scaled.jpg"
+              src="/images/who-we-are-1.jpeg"
               height={600}
               width={420}
               alt=""
@@ -44,7 +44,7 @@ const WhoWeAre = () => {
               <p>{t("arborist")}</p>
             </div>
           </div>
-        </div> */}
+        </div>
       </article>
     </section>
   );
