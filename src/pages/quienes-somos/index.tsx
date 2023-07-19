@@ -40,7 +40,7 @@ const WhoWeAre = () => {
               alt=""
             />
             <div className="who-we-are__names">
-              <p>Marcos Lopez</p>
+              <p>Marcos López-Jurado</p>
               <p>{t("arborist")}</p>
             </div>
           </div>
