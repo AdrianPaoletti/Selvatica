@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-
 import { useTranslation } from "react-i18next";
 
 const WhoWeAre = () => {
@@ -32,7 +31,7 @@ const WhoWeAre = () => {
         <h3 className="heading-terciary u-padding-top-bottom-medium">
           {t("team")}
         </h3>
-        <div className="who-we-are__team-images u-padding-top-medium">
+        {/* <div className="who-we-are__team-images u-padding-top-medium">
           <div className="who-we-are__image">
             <img
               src="https://simbiosiestudi.com/wp-content/uploads/2022/10/DSCF9358-3-1-scaled.jpg"
@@ -45,7 +44,7 @@ const WhoWeAre = () => {
               <p>{t("arborist")}</p>
             </div>
           </div>
-        </div>
+        </div> */}
       </article>
     </section>
   );
